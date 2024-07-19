@@ -1,0 +1,41 @@
+header {
+  border-bottom: 1px solid rgb(234, 234, 234);
+  h3 {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0%;
+  }
+  p {
+    color: rgb(157, 157, 157);
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0%;
+  }
+  ul {
+    justify-content: space-between;
+    li {
+      display: flex;
+      align-items: center;
+      font-weight: 400;
+      cursor: pointer;
+      span {
+        color: #080808;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 0%;
+        opacity: 0.8;
+        transition: 0.3s ease;
+
+        &:hover {
+          opacity: 1;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}

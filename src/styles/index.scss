@@ -1,0 +1,47 @@
+@import "macro-css";
+
+body {
+  font-family: "Inter", sans-serif;
+  background: rgb(231, 246, 255);
+}
+* {
+  font-family: "Inter", sans-serif;
+}
+
+.wrapper {
+  width: 1080px;
+  margin: 0 auto;
+  margin-top: 85px;
+  border-radius: 20px;
+
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.04);
+  background: rgb(255, 255, 255);
+}
+
+.content {
+  h1 {
+    margin: 0;
+  }
+  .search-block {
+    position: relative;
+    border: 1px solid #f3f3f3;
+    border-radius: 10px;
+    padding: 0 15px;
+
+    .closer {
+      position: absolute;
+      right: 0;
+      width: 20px;
+      height: 20px;
+      top: 13px;
+      right: 15px;
+    }
+
+    input {
+      border: 0;
+      padding: 13px;
+      font-size: 16px;
+      width: 200px;
+    }
+  }
+}

@@ -1,0 +1,223 @@
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.overlayVisible {
+  visibility: visible;
+  opacity: 1;
+  .drawer {
+    transform: translateX(0%);
+  }
+}
+
+.drawer {
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-between;
+  position: absolute;
+
+  width: 420px;
+  height: 100%;
+  right: 0;
+  background: #fff;
+  box-shadow: -10px 4px 24px 0px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+
+  .item {
+    overflow: auto;
+    margin-bottom: 40px;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      margin-bottom: 21px;
+    }
+
+    h3 {
+      font-size: 22px;
+      font-weight: 600;
+      line-height: 27px;
+      margin: 0;
+      margin-bottom: 10px;
+    }
+    p {
+      margin: 0;
+      color: #000;
+      font-family: Inter;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: center;
+      opacity: 0.4;
+    }
+    .greenButtonBack {
+      margin-top: 40px;
+      margin-bottom: 80px;
+      width: 100%;
+      height: 55px;
+      background: #9dd558;
+      border-radius: 18px;
+      border: 0;
+      font-size: 16px;
+      color: #fff;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.1s ease-in-out;
+
+      &:hover {
+        background: lighten(#9dd558, 5%);
+      }
+      &:active {
+        background: darken(#9dd558, 7%);
+      }
+      position: relative;
+      &:hover {
+        img {
+          transform: translateX(-10px);
+        }
+      }
+
+      img {
+        position: absolute;
+        transform: rotate(180deg);
+        left: 75px;
+        top: 21px;
+        transition: transform 0.2s ease-in-out;
+      }
+    }
+  }
+
+  .items {
+    height: 635px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    overflow: scroll;
+    overflow-x: hidden;
+    &::-webkit-scrollbar {
+      width: 7px;
+      height: 7px;
+      background-color: #fff;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      height: 7px;
+      background-color: #cbcbcb;
+    }
+  }
+
+  .cartFill {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: 24px;
+  }
+}
+.cartTotalBlock {
+  margin-top: auto;
+  ul {
+    margin-bottom: 40px !important;
+    li {
+      display: flex;
+      align-items: flex-end;
+      margin-bottom: 20px;
+    }
+    div {
+      flex: 1;
+      border-bottom: 1px dashed #dfdfdf;
+      position: relative;
+      top: -4px;
+      margin: 0 10px;
+    }
+  }
+  .greenButton {
+    position: relative;
+    &:hover {
+      img {
+        transform: translateX(5px);
+      }
+    }
+
+    img {
+      position: absolute;
+      right: 30px;
+      top: 21px;
+      transition: transform 0.2s ease-in-out;
+    }
+  }
+}
+
+.greenButton {
+  margin-bottom: 80px;
+  width: 100%;
+  height: 55px;
+  background: #9dd558;
+  border-radius: 18px;
+  border: 0;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.1s ease-in-out;
+
+  &:hover {
+    background: lighten(#9dd558, 5%);
+  }
+  &:active {
+    background: darken(#9dd558, 7%);
+  }
+}
+
+.cartItem {
+  border: 1px solid #f3f3f3;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 20px;
+
+  .cartItemImg {
+    width: 70px;
+    height: 70px;
+    background-size: contain;
+    background-position: 0 -3px;
+    background-repeat: no-repeat;
+    margin-right: 20px;
+  }
+  p {
+    font-size: 14px;
+    margin: 0;
+  }
+  b {
+    font-size: 14px;
+  }
+  .removeBtn {
+    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity 0.2s ease-in-out;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
